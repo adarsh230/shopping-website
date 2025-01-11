@@ -27,7 +27,7 @@ public class OrderServiceImpl implements OrderService{
             order.setQuantity(orderRequest.quantity());
             orderRepository.save(order);
         }else{
-            throw new RuntimeException("Product with SkuCode "+orderRequest.skuCode()+ "is not in stock");
+            throw new RuntimeException("Product with SkuCode "+orderRequest.skuCode()+ " is not in stock");
         }
     }
 }

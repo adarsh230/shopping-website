@@ -32,7 +32,6 @@ public class ProductServiceImpl implements ProductService {
 
     public List<ProductResponse> getAllProducts(){
         List<Product> products = productRepository.findAll();
-
         return products.stream().map(product -> new ProductResponse(product.getId(), product.getName(), product.getDescription(), product.getPrice())).toList();
     }
 }
